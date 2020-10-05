@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 03, 2020 at 05:54 AM
--- Server version: 5.7.21
--- PHP Version: 7.2.4
+-- Generation Time: Oct 05, 2020 at 08:12 AM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,18 +31,20 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(30) NOT NULL,
-  `user_password` varchar(30) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `user_password` varchar(50) NOT NULL,
+  `std_img` varchar(250) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `user_password`) VALUES
-(1, 'Noman', 'noman');
+INSERT INTO `users` (`id`, `username`, `user_password`, `std_img`) VALUES
+(1, 'sherkhan-anees3', 'baloch', ''),
+(7, 'Noman', 'Noman', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
